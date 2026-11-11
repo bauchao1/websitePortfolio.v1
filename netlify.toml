@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Send every page URL (e.g. /about, /projects/trackhub) to the app; real files are served first.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
